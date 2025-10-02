@@ -1,6 +1,13 @@
 *{
     margin: 0px;
     padding: 0px;
-}header{
-    background-color: rgb(211, 137, 137);
+
+}
+body{
+    margin: auto !important;
+    width: 80% !important;
+}
+header{
+    color: black;
+    font-family:'Courier New', Courier, monospace;
 }
