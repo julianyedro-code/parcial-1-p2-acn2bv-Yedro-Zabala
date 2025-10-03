@@ -102,7 +102,7 @@
         footer {
             background-color: darkslateblue;
             color: lavender;
-            padding: 3px;
+            padding: 1rem;
         }
         
         .color-box {
@@ -117,6 +117,7 @@
         }
         
         .color-name {
+            font-size: 0.9rem;
             text-align: center;
         }
         
@@ -129,6 +130,7 @@
         }
         
         .color-hex {
+            font-size: 0.8rem;
             text-align: center;
             font-family: monospace;
         }
@@ -187,6 +189,36 @@
         </section>
         <section class="tarjetas">
             
+        
+            <?php
+        
+            $totalMostrar = count($vehiculosMostrar);
+            
+            if ($totalMostrar == 0) {
+                echo 'No se encontraron vehículos con los filtros aplicados';
+            } else {
+                for ($i = 0; $i < $totalMostrar; $i++) {
+                    $vehiculo = $vehiculosMostrar[$i];
+            ?>
+                    <div class="card" style="width: 18rem;">
+                        <img src="<?= $vehiculo->imagen ?>" class="card-img-top" alt="<?= $vehiculo->titulo ?>" style="height: 180px; object-fit: cover;">
+                        
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $vehiculo->titulo ?></h5>
+                            <p class="card-text"><?= $vehiculo->descripcion ?></p>
+                            <p class="card-text"><small class="text-muted">
+                                Motor: <?= $vehiculo->motor ?> | 
+                                Potencia: <?= $vehiculo->potencia ?> | 
+                                Transmisión: <?= $vehiculo->transmision ?>
+                            </small></p>
+                            <p class="card-text precio"><strong>Precio: $<?= $vehiculo->precio ?></strong></p>
+                            <a href="#" class="btn btn-primary">ver mas</a>
+                        </div>
+                    </div>
+                
+            
+            <?php  } 
+                } ?>
         </section>
 
     </main>

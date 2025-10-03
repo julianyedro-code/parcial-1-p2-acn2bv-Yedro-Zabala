@@ -124,7 +124,7 @@ $totalVehiculos = count($vehiculos);
 
 
 //refactorizacion 
-//implementacion de nuevo filtro 
+//implementacin de nuevo filtro 
 
 if ($eleccion == "" && ($seleccion == "" || $seleccion == "sinSeleccion")) {
     $vehiculosMostrar = $vehiculos;
@@ -136,11 +136,11 @@ if ($eleccion == "" && ($seleccion == "" || $seleccion == "sinSeleccion")) {
         if ($eleccion != "" && $vehiculo->marca != $eleccion) {
             $mostrar = false;
         }
-        if ($mostrar && $seleccion != "" && $seleccion != "sinSeleccion" && $vehiculo->categoria != $seleccion) {
+        if ($mostrar==true && $seleccion != "" && $seleccion != "sinSeleccion" && $vehiculo->categoria != $seleccion) {
             $mostrar = false;
         }
         
-        if ($mostrar) {
+        if ($mostrar==true) {
             $vehiculosMostrar[] = $vehiculo;
         }
     }
