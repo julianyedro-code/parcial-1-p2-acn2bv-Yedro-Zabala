@@ -528,8 +528,9 @@
 
                     
 
-            <footer>Auto</footer>  
-        
+    <footer class="text-center py-3">
+         <p class="mb-0">Encuentra tu vehículo y vive la experiencia de conducir</p>
+    </footer>
         
         
         </body>
